@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Created with Liquid XML 2014 Developer Bundle Edition 12.2.4.5273 (http://www.liquid-technologies.com)-->
+<xs:schema xmlns:res="http://lpl.com/BTS/AccountService/GetAccountDetails/GetAccountDetailsResponse/2014/06"
+	 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns:ns0="http://lpl.com/Framework/commonRestResponse/2013/09"
+	 xmlns:nrp="http://lpl.com/BTS/AccountService/GetAccountDetails/NRPRetirementPlanResponse/2014/06"
+	 targetNamespace="http://lpl.com/BTS/AccountService/GetAccountDetails/GetAccountDetailsResponse/2014/06"
+	 elementFormDefault="unqualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://lpl.com/BTS/AccountService/GetAccountDetails/NRPRetirementPlanResponse/2014/06" schemaLocation="NRPRetirementPlanResponse.xsd"/>
+	<xs:element name="GetAccountDetailsResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="accountSummary" type="res:accountSummaryType" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="accountSummaryType">
+		<xs:sequence>
+			<xs:element name="accountDetails" type="res:accountDetailsType" minOccurs="0"/>
+			<xs:element name="accountLocationShortName" type="xs:string" minOccurs="0"/>
+			<xs:element name="accountProfile" type="res:profileSummaryType" minOccurs="0"/>
+			<xs:element name="accountType" type="xs:string" minOccurs="0"/>
+			<xs:element name="acctClassCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="acctID" type="xs:int" minOccurs="0"/>
+			<xs:element name="acctNo" type="xs:string" minOccurs="0"/>
+			<xs:element name="ACHSettings" type="res:ACHSettingsType" minOccurs="0"/>
+			<xs:element name="advisoryDetails" type="res:advisoryDetailsType" minOccurs="0"/>
+			<xs:element name="allocationDetails" type="res:allocationDetailsType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="balances" type="res:accountBalancesType" minOccurs="0"/>
+			<xs:element name="balancesIntraday" type="res:accountBalancesType" minOccurs="0"/>
+			<xs:element name="carrierMatrix" type="res:carrierMatrixType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="caseHistory" type="res:caseHistoryType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="cashAccounts" type="res:cashAccountsType" minOccurs="0"/>
+			<xs:element name="directBusinessAccounts" type="res:directBusinessAccountsType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="distributionDetails" type="res:distributionDetailsType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="documents" type="res:documentsType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="employeeRelated" type="xs:string" minOccurs="0"/>
+			<xs:element name="hasFixedIncomeFundamentals" type="xs:unsignedByte" minOccurs="0"/>
+			<xs:element name="hasInvestmentManagers" type="xs:unsignedByte" minOccurs="0"/>
+			<xs:element name="hasMutualFundFundamentals" type="xs:unsignedByte" minOccurs="0"/>
+			<xs:element name="hasStockFundamentals" type="xs:unsignedByte" minOccurs="0"/>
+			<xs:element name="hasStrategists" type="xs:unsignedByte" minOccurs="0"/>
+			<xs:element name="instructions" type="res:accountInstructionType" minOccurs="0"/>
+			<xs:element name="interestedParties" type="res:interestedPartiesType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Investments" type="res:InvestmentsType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="isAdvisory" type="xs:unsignedByte" minOccurs="0"/>
+			<xs:element name="isLinked" type="xs:unsignedByte" minOccurs="0"/>
+			<xs:element name="isNetworked" type="xs:unsignedByte" minOccurs="0"/>
+			<xs:element name="isNewAccount" type="xs:unsignedByte" minOccurs="0"/>
+			<xs:element name="isNrpRetirementPlan" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="isPtcAccount" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="isRetirement" type="xs:unsignedByte" minOccurs="0"/>
+			<xs:element name="isRoboAccountClass" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="largeTraderID" type="xs:string" minOccurs="0"/>
+			<xs:element name="lplAcctNo" type="xs:string" minOccurs="0"/>
+			<xs:element name="managerDetails" type="res:managerDetailsType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="natP" type="xs:string" minOccurs="0"/>
+			<xs:element name="nickname" type="xs:string" minOccurs="0"/>
+			<xs:element name="nrpRetirementPlanDetails" type="nrp:nrpType" minOccurs="0"/>
+			<xs:element name="openNotifications" type="xs:int" minOccurs="0"/>
+			<xs:element name="portfolioManagerDetails" type="res:portfolioManagerDetailsType" minOccurs="0"/>
+			<xs:element name="prudentProcessResponse" type="res:PrudentProcessResponseType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="repID" type="xs:string" minOccurs="0"/>
+			<xs:element name="repName" type="xs:string" minOccurs="0"/>
+			<xs:element name="requirements" type="res:requirementsType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="restrictionDetails" type="res:restrictionDetailsType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="retirementDetails" type="res:retirementDetailsType" minOccurs="0"/>
+			<xs:element name="retPlanType" type="xs:string" minOccurs="0"/>
+			<xs:element name="riskDetails" type="res:RiskDetailsType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="sponsorAccountLinkStatusCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="sponsorAccountLinkStatusName" type="xs:string" minOccurs="0"/>
+			<xs:element name="strategistDetails" type="res:strategistDetailsType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="suitability" type="res:accountSuitabilityType" minOccurs="0"/>
+			<xs:element name="systematics" type="res:systematicsType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="tenantID" type="xs:int" minOccurs="0"/>
+			<xs:element name="tradingAuthorities" type="res:tradingAuthoritiesType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="accountDetailsType">
+		<xs:sequence>
+			<xs:element name="accountName" type="xs:string" minOccurs="0"/>
+			<xs:element name="accountRegistration" type="xs:string" minOccurs="0"/>
+			<xs:element name="accountTitle" type="xs:string" minOccurs="0"/>
+			<xs:element name="acctClass" type="xs:string" minOccurs="0"/>
+			<xs:element name="acctClassCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="acctLocCode" type="xs:int" minOccurs="0"/>
+			<xs:element name="acctNickNm" type="xs:string" minOccurs="0"/>
+			<xs:element name="acctRiskScore" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="actForm5" type="xs:string" minOccurs="0"/>
+			<xs:element name="annualIncm" type="xs:string" minOccurs="0"/>
+			<xs:element name="annuitant1" type="xs:string" minOccurs="0"/>
+			<xs:element name="annuitant2" type="xs:string" minOccurs="0"/>
+			<xs:element name="annuityName" type="xs:string" minOccurs="0"/>
+			<xs:element name="asOfDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="assetClass" type="xs:string" minOccurs="0"/>
+			<xs:element name="bookShares" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="carrierName" type="xs:string" minOccurs="0"/>
+			<xs:element name="carrierspecific1" type="xs:string" minOccurs="0"/>
+			<xs:element name="carrierspecific2" type="xs:string" minOccurs="0"/>
+			<xs:element name="carrierspecific3" type="xs:string" minOccurs="0"/>
+			<xs:element name="carrierspecific4" type="xs:string" minOccurs="0"/>
+			<xs:element name="carrierspecific5" type="xs:string" minOccurs="0"/>
+			<xs:element name="caseManager" type="xs:string" minOccurs="0"/>
+			<xs:element name="cashBal" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="cashPerc" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="category" type="xs:string" minOccurs="0"/>
+			<xs:element name="clientGroupID" type="xs:string" minOccurs="0"/>
+			<xs:element name="clientGroupName" type="xs:string" minOccurs="0"/>
+			<xs:element name="clientID" type="xs:string" minOccurs="0"/>
+			<xs:element name="clientName" type="xs:string" minOccurs="0"/>
+			<xs:element name="closeDt" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="commYtd" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="contractStatus" type="xs:string" minOccurs="0"/>
+			<xs:element name="contractValue" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="CSI" type="xs:string" minOccurs="0"/>
+			<xs:element name="cusip" type="xs:string" minOccurs="0"/>
+			<xs:element name="cusipSymbol" type="xs:string" minOccurs="0"/>
+			<xs:element name="cusipType" type="xs:string" minOccurs="0"/>
+			<xs:element name="custodianManager" type="xs:string" minOccurs="0"/>
+			<xs:element name="docCategory" type="xs:string" minOccurs="0"/> <!-- Dividend Standing Instruction-->
+			<xs:element name="downloadInclusion" type="xs:string" minOccurs="0"/>
+			<xs:element name="DSI" type="xs:string" minOccurs="0"/> <!-- Margin Standing Instruction-->
+			<xs:element name="emplClass" type="xs:string" minOccurs="0"/>
+			<xs:element name="emplClassCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="faceAmount" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="faceValue" type="xs:string" minOccurs="0"/>
+			<xs:element name="familyName" type="xs:string" minOccurs="0"/>
+			<xs:element name="feeScheduleName" type="xs:string" minOccurs="0"/>
+			<xs:element name="fundAccountNo" type="xs:string" minOccurs="0"/>
+			<xs:element name="fundName" type="xs:string" minOccurs="0"/>
+			<xs:element name="institutionTypeOverride" type="xs:string" minOccurs="0"/>
+			<xs:element name="investmentTimeHorizon" type="xs:string" minOccurs="0"/>
+			<xs:element name="investmentTimeHorizonCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="isFeeWaivered" type="xs:string" minOccurs="0"/>
+			<xs:element name="isISFeeEnabled" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="isPerformanceEligible" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="isRegCodeDerived" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="isRepaperReady" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="issueDate" type="xs:string" minOccurs="0"/>
+			<xs:element name="lastYearRealizedGainLossAmount" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="lastYearRevenue" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="loanAmount" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="LPLAcctVal" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="mailingDate" type="xs:string" minOccurs="0"/>
+			<xs:element name="managedAcctPrintCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="maturityDate" type="xs:string" minOccurs="0"/>
+			<xs:element name="MMFSellFirst" type="xs:string" minOccurs="0"/>
+			<xs:element name="MMFSweep" type="xs:string" minOccurs="0"/>
+			<xs:element name="modalPremium" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="mode" type="xs:string" minOccurs="0"/>
+			<xs:element name="MSI" type="xs:string" minOccurs="0"/> <!-- Cash Standing Instruction-->
+			<xs:element name="narrStatusDescription" type="xs:string" minOccurs="0"/>
+			<xs:element name="narrStatusId" type="xs:int" minOccurs="0"/>
+			<xs:element name="NetworkedLPLAccountID" type="xs:int" minOccurs="0"/>
+			<xs:element name="oldAccountNo" type="xs:string" minOccurs="0"/>
+			<xs:element name="openDt" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="outsideAccountValue" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="pepPosition" type="xs:string" minOccurs="0"/>
+			<xs:element name="physicalShares" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="policyDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="policyId" type="xs:int" minOccurs="0"/>
+			<xs:element name="policyNumber" type="xs:string" minOccurs="0"/>
+			<xs:element name="productClass" type="xs:string" minOccurs="0"/>
+			<xs:element name="productCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="productName" type="xs:string" minOccurs="0"/>
+			<xs:element name="productType" type="xs:string" minOccurs="0"/>
+			<xs:element name="programName" type="xs:string" minOccurs="0"/>
+			<xs:element name="referralText" type="xs:string" minOccurs="0"/>
+			<xs:element name="regCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="regCodeDescription" type="xs:string" minOccurs="0"/>
+			<xs:element name="secondaryRepId" type="xs:string" minOccurs="0"/>
+			<xs:element name="socialCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="sponsorAccountNo" type="xs:string" minOccurs="0"/>
+			<xs:element name="sponsorCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="sponsorName" type="xs:string" minOccurs="0"/>
+			<xs:element name="subFirm" type="xs:string" minOccurs="0"/>
+			<xs:element name="surrenderValue" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="tAMP" type="xs:string" minOccurs="0"/>
+			<xs:element name="totalAcctVal" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="totalAcctValChange" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="totalAcctValChangePercent" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="totalPayments" type="xs:string" minOccurs="0"/>
+			<xs:element name="totalPremium" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="totalSegmentTypeHoldingAccount" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="totalShares" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="totalStructuredInvestmentOption" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="totalVariableInvestmentOption" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="totalWithdrawals" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="w8Form" type="xs:string" minOccurs="0"/>
+			<xs:element name="yearToDate" type="xs:string" minOccurs="0"/>
+			<xs:element name="ytdgl" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="ytdglPerc" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="ytdTotalRevenue" type="xs:decimal" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="profileSummaryType">
+		<xs:sequence>
+			<xs:element name="AccountHolders" type="res:AccountHoldersType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="age" type="xs:int" minOccurs="0"/>
+			<xs:element name="annlIncmCd" type="xs:string" minOccurs="0"/>
+			<xs:element name="annlIncmRange" type="xs:string" minOccurs="0"/>
+			<xs:element name="AVLastAccess" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="AVStatus" type="xs:string" minOccurs="0"/>
+			<xs:element name="bDay" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="beneficiary1" type="xs:string" minOccurs="0"/>
+			<xs:element name="beneficiary2" type="xs:string" minOccurs="0"/>
+			<xs:element name="bPhone" type="xs:string" minOccurs="0"/>
+			<xs:element name="clntSinc" type="xs:string" minOccurs="0"/>
+			<xs:element name="cntryResId" type="xs:string" minOccurs="0"/>
+			<xs:element name="countryCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="deathBenefit" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="email" type="xs:string" minOccurs="0"/>
+			<xs:element name="emplAddress" type="res:addressType" minOccurs="0"/>
+			<xs:element name="fax" type="xs:string" minOccurs="0"/>
+			<xs:element name="FISBranchID" type="xs:int" minOccurs="0"/>
+			<xs:element name="FISBranchName" type="xs:string" minOccurs="0"/>
+			<xs:element name="groupNumber" type="xs:string" minOccurs="0"/>
+			<xs:element name="homeAddress" type="res:addressType" minOccurs="0"/>
+			<xs:element name="household" type="xs:string" minOccurs="0"/>
+			<xs:element name="hPhone" type="xs:string" minOccurs="0"/>
+			<xs:element name="institution" type="xs:string" minOccurs="0"/>
+			<xs:element name="insurerID" type="xs:string" minOccurs="0"/>
+			<xs:element name="insurerName" type="xs:string" minOccurs="0"/>
+			<xs:element name="invObjBtrCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="invObjCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="invObjName" type="xs:string" minOccurs="0"/>
+			<xs:element name="isSSN" type="xs:unsignedByte" minOccurs="0"/>
+			<xs:element name="liqNetWorthCd" type="xs:string" minOccurs="0"/>
+			<xs:element name="liqNetWorthRange" type="xs:string" minOccurs="0"/>
+			<xs:element name="mailAddress" type="res:addressType" minOccurs="0"/>
+			<xs:element name="modelPortfolioName" type="xs:string" minOccurs="0"/>
+			<xs:element name="mPhone" type="xs:string" minOccurs="0"/>
+			<xs:element name="netWorthCd" type="xs:string" minOccurs="0"/>
+			<xs:element name="netWorthRange" type="xs:string" minOccurs="0"/>
+			<xs:element name="numNameLines" type="xs:int" minOccurs="0"/>
+			<xs:element name="owner1" type="xs:string" minOccurs="0"/>
+			<xs:element name="owner2" type="xs:string" minOccurs="0"/>
+			<xs:element name="primaryAlphaKey1" type="xs:string" minOccurs="0"/>
+			<xs:element name="provinceCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="regLn1" type="xs:string" minOccurs="0"/>
+			<xs:element name="regLn2" type="xs:string" minOccurs="0"/>
+			<xs:element name="regLn3" type="xs:string" minOccurs="0"/>
+			<xs:element name="regLn4" type="xs:string" minOccurs="0"/>
+			<xs:element name="regLn5" type="xs:string" minOccurs="0"/>
+			<xs:element name="regLn6" type="xs:string" minOccurs="0"/>
+			<xs:element name="regLn7" type="xs:string" minOccurs="0"/>
+			<xs:element name="regsType" type="xs:string" minOccurs="0"/>
+			<xs:element name="repName" type="xs:string" minOccurs="0"/>
+			<xs:element name="roboModelName" type="xs:string" minOccurs="0"/>
+			<xs:element name="secondaryAlphaKey2" type="xs:string" minOccurs="0"/>
+			<xs:element name="secondaryAlphaKey3" type="xs:string" minOccurs="0"/>
+			<xs:element name="secondaryAlphaKey4" type="xs:string" minOccurs="0"/>
+			<xs:element name="secondaryAlphaKey5" type="xs:string" minOccurs="0"/>
+			<xs:element name="SSNTIN" type="xs:int" minOccurs="0"/>
+			<xs:element name="SSNTIN2" type="xs:string" minOccurs="0"/>
+			<xs:element name="stateCode" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AccountHoldersType">
+		<xs:sequence>
+			<xs:element name="accountNo" type="xs:string" minOccurs="0"/>
+			<xs:element name="addressLine1" type="xs:string" minOccurs="0"/>
+			<xs:element name="addressLine2" type="xs:string" minOccurs="0"/>
+			<xs:element name="addressLine3" type="xs:string" minOccurs="0"/>
+			<xs:element name="affiliationCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="affiliationCorporation" type="xs:string" minOccurs="0"/>
+			<xs:element name="age" type="xs:int" minOccurs="0"/>
+			<xs:element name="birthDate" type="xs:string" minOccurs="0"/>
+			<xs:element name="businessPhone" type="xs:string" minOccurs="0"/>
+			<xs:element name="citizenshipCountryCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="citizenshipCountryName" type="xs:string" minOccurs="0"/>
+			<xs:element name="city" type="xs:string" minOccurs="0"/>
+			<xs:element name="clientID" type="xs:int" minOccurs="0"/>
+			<xs:element name="controlOwners" type="xs:string" minOccurs="0"/>
+			<xs:element name="countryCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="countryName" type="xs:string" minOccurs="0"/>
+			<xs:element name="customerID" type="xs:string" minOccurs="0"/>
+			<xs:element name="custRole" type="xs:string" minOccurs="0"/>
+			<xs:element name="email" type="xs:string" minOccurs="0"/>
+			<xs:element name="emergencyContact" type="res:emergencyContactType" minOccurs="0"/>
+			<xs:element name="employerAddressLine1" type="xs:string" minOccurs="0"/>
+			<xs:element name="employerAddressLine2" type="xs:string" minOccurs="0"/>
+			<xs:element name="employerAddressLine3" type="xs:string" minOccurs="0"/>
+			<xs:element name="employerCity" type="xs:string" minOccurs="0"/>
+			<xs:element name="employerCountryCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="employerCountryName" type="xs:string" minOccurs="0"/>
+			<xs:element name="employerName" type="xs:string" minOccurs="0"/>
+			<xs:element name="employerPostalCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="employerProvinceCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="employerProvinceName" type="xs:string" minOccurs="0"/>
+			<xs:element name="employerStateCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="employerStateName" type="xs:string" minOccurs="0"/>
+			<xs:element name="employerZipCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="employerZipPlusFour" type="xs:string" minOccurs="0"/>
+			<xs:element name="employmentIndustry" type="xs:string" minOccurs="0"/>
+			<xs:element name="equityInterest" type="xs:string" minOccurs="0"/>
+			<xs:element name="fax" type="xs:string" minOccurs="0"/>
+			<xs:element name="firstName" type="xs:string" minOccurs="0"/>
+			<xs:element name="fullName" type="xs:string" minOccurs="0"/>
+			<xs:element name="gender" type="xs:string" minOccurs="0"/>
+			<xs:element name="homePhone" type="xs:string" minOccurs="0"/>
+			<xs:element name="idExpirationDate" type="xs:string" minOccurs="0"/>
+			<xs:element name="idIssueDate" type="xs:string" minOccurs="0"/>
+			<xs:element name="idNumber" type="xs:string" minOccurs="0"/>
+			<xs:element name="idPlaceOfIssuance" type="xs:string" minOccurs="0"/>
+			<xs:element name="idRiskReviewInd" type="xs:string" minOccurs="0"/>
+			<xs:element name="idType" type="xs:string" minOccurs="0"/>
+			<xs:element name="idTypeName" type="xs:string" minOccurs="0"/>
+			<xs:element name="isCustRoleDerived" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="isIDVerified" type="xs:string" minOccurs="0"/>
+			<xs:element name="isIndividual" type="xs:string" minOccurs="0"/>
+			<xs:element name="isPEP" type="xs:string" minOccurs="0"/>
+			<xs:element name="isSSN" type="xs:string" minOccurs="0"/>
+			<xs:element name="lastName" type="xs:string" minOccurs="0"/>
+			<xs:element name="mailingAddressLine1" type="xs:string" minOccurs="0"/>
+			<xs:element name="mailingAddressLine2" type="xs:string" minOccurs="0"/>
+			<xs:element name="mailingAddressLine3" type="xs:string" minOccurs="0"/>
+			<xs:element name="mailingCity" type="xs:string" minOccurs="0"/>
+			<xs:element name="mailingCountryCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="mailingIsForeign" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="mailingState" type="xs:string" minOccurs="0"/>
+			<xs:element name="mailingZipCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="metInPersonInd" type="xs:string" minOccurs="0"/>
+			<xs:element name="middleName" type="xs:string" minOccurs="0"/>
+			<xs:element name="nameType" type="xs:string" minOccurs="0"/>
+			<xs:element name="occupation" type="xs:string" minOccurs="0"/>
+			<xs:element name="ownershipPct" type="xs:string" minOccurs="0"/>
+			<xs:element name="postalCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="provinceCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="provinceName" type="xs:string" minOccurs="0"/>
+			<xs:element name="relation" type="xs:string" minOccurs="0"/>
+			<xs:element name="relationshipType" type="xs:string" minOccurs="0"/>
+			<xs:element name="ssnTIN" type="xs:string" minOccurs="0"/>
+			<xs:element name="stateCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="stateName" type="xs:string" minOccurs="0"/>
+			<xs:element name="tobacco" type="xs:string" minOccurs="0"/>
+			<xs:element name="zipCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="zipPlusFour" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="emergencyContactType">
+		<xs:sequence>
+			<xs:element name="address" type="xs:string" minOccurs="0"/>
+			<xs:element name="city" type="xs:string" minOccurs="0"/>
+			<xs:element name="countryCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="declineDate" type="xs:date" minOccurs="0"/>
+			<xs:element name="emailAddress" type="xs:string" minOccurs="0"/>
+			<xs:element name="foreignZip" type="xs:string" minOccurs="0"/>
+			<xs:element name="name" type="xs:string" minOccurs="0"/>
+			<xs:element name="phoneCountry" type="xs:string" minOccurs="0"/>
+			<xs:element name="phoneNumber" type="xs:string" minOccurs="0"/>
+			<xs:element name="provinceCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="relationshipCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="relationshipDescription" type="xs:string" minOccurs="0"/>
+			<xs:element name="state" type="xs:string" minOccurs="0"/>
+			<xs:element name="zipCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="zipCodePlus4" type="xs:string" minOccurs="0"/>
+			<xs:element name="zipCodePlus4Ind" type="xs:boolean" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="retirementDetailsType">
+		<xs:sequence>
+			<xs:element name="beneficiaries" type="res:beneficiariesType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="contributionDistribution" type="res:retirementContributionDistributionYearType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="corr1099" type="xs:string" minOccurs="0"/>
+			<xs:element name="corr5498" type="xs:string" minOccurs="0"/>
+			<xs:element name="currentYearIRAValue" type="xs:string" minOccurs="0"/>
+			<xs:element name="currRMDAmt" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="disclaimer" type="xs:string" minOccurs="0"/>
+			<xs:element name="disclaimerText" type="xs:string" minOccurs="0"/>
+			<xs:element name="fedWithholdInd" type="xs:string" minOccurs="0"/>
+			<xs:element name="fedWithholdPct" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="IRAPriorYrDistributionAmt" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="iraType" type="xs:string" minOccurs="0"/>
+			<xs:element name="iraTypeRaw" type="xs:string" minOccurs="0"/>
+			<xs:element name="IRAYTDDistributionAmt" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="lastYearBalance" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="LastYearRMDDistributionAmt" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="nxtPayDt" type="xs:string" minOccurs="0"/>
+			<xs:element name="partBirthDate" type="xs:string" minOccurs="0"/>
+			<xs:element name="pooledAccount" type="xs:string" minOccurs="0"/>
+			<xs:element name="previousYearIRAValue" type="xs:string" minOccurs="0"/>
+			<xs:element name="RMDRemaining" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="RMDServiceYN" type="xs:string" minOccurs="0"/>
+			<xs:element name="stateWithholdInd" type="xs:string" minOccurs="0"/>
+			<xs:element name="stateWithholdPct" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="xrefAccountNo" type="xs:string" minOccurs="0"/>
+			<xs:element name="YTDRMDDistributionAmt" type="xs:decimal" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="retirementContributionDistributionYearType">
+		<xs:sequence>
+			<xs:element name="taxYear" type="xs:string" minOccurs="0"/>
+			<xs:element name="data" type="res:retirementContributionDistributionDetailType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="retirementContributionDistributionDetailType">
+		<xs:sequence>
+			<xs:element name="aggregateAmount" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="aggregateDescription" type="xs:string" minOccurs="0"/>
+			<xs:element name="contributionDistributionIndicator" type="xs:string" minOccurs="0"/>
+			<xs:element name="dateEntered" type="xs:string" minOccurs="0"/>
+			<xs:element name="detailAmount" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="detailDescription" type="xs:string" minOccurs="0"/>
+			<xs:element name="quantity" type="xs:decimal" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ACHSettingsType">
+		<xs:sequence>
+			<xs:element name="onDemandInstructions" type="res:achOnDemandInstructionsType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="transfers" type="res:achTransfersType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="distributionDetailsType">
+		<xs:sequence>
+			<xs:element name="accumAmt" type="xs:string" minOccurs="0"/>
+			<xs:element name="beginDt" type="xs:string" minOccurs="0"/>
+			<xs:element name="bnkABA" type="xs:string" minOccurs="0"/>
+			<xs:element name="bnkAcctNo" type="xs:string" minOccurs="0"/>
+			<xs:element name="bnkAcctType" type="xs:string" minOccurs="0"/>
+			<xs:element name="bnkName" type="xs:string" minOccurs="0"/>
+			<xs:element name="customerName" type="xs:string" minOccurs="0"/>
+			<xs:element name="distbType" type="xs:string" minOccurs="0"/>
+			<xs:element name="endDt" type="xs:string" minOccurs="0"/>
+			<xs:element name="fedWithHld" type="xs:string" minOccurs="0"/>
+			<xs:element name="fedWithHldCd" type="xs:string" minOccurs="0"/>
+			<xs:element name="frequency" type="xs:string" minOccurs="0"/>
+			<xs:element name="insufAmt" type="xs:string" minOccurs="0"/>
+			<xs:element name="journalAccountId" type="xs:int" minOccurs="0"/>
+			<xs:element name="journalAccountNo" type="xs:string" minOccurs="0"/>
+			<xs:element name="payableTo" type="xs:string" minOccurs="0"/>
+			<xs:element name="stateWithHld" type="xs:string" minOccurs="0"/>
+			<xs:element name="stateWithHldCd" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="achTransfersType">
+		<xs:sequence>
+			<xs:element name="accountType" type="xs:string" minOccurs="0"/>
+			<xs:element name="achType" type="xs:string" minOccurs="0"/>
+			<xs:element name="amount" type="xs:double" minOccurs="0"/>
+			<xs:element name="bankABA" type="xs:string" minOccurs="0"/>
+			<xs:element name="bankAccountNo" type="xs:string" minOccurs="0"/>
+			<xs:element name="bankAccountType" type="xs:string" minOccurs="0"/>
+			<xs:element name="bankName" type="xs:string" minOccurs="0"/>
+			<xs:element name="beginDate" type="xs:string" minOccurs="0"/>
+			<xs:element name="customerName" type="xs:string" minOccurs="0"/>
+			<xs:element name="endDate" type="xs:string" minOccurs="0"/>
+			<xs:element name="frequency" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="achOnDemandInstructionsType">
+		<xs:sequence>
+			<xs:element name="abaNo" type="xs:string" minOccurs="0"/>
+			<xs:element name="accountType" type="xs:string" minOccurs="0"/>
+			<xs:element name="bankName" type="xs:string" minOccurs="0"/>
+			<xs:element name="checkingSavingsIndicator" type="xs:string" minOccurs="0"/>
+			<xs:element name="customerAccountName" type="xs:string" minOccurs="0"/>
+			<xs:element name="customerAccountName2" type="xs:string" minOccurs="0"/>
+			<xs:element name="customerAccountNo" type="xs:string" minOccurs="0"/>
+			<xs:element name="fedWithholdInd" type="xs:string" minOccurs="0"/>
+			<xs:element name="fedWithholdPct" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="liveDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="stateWithholdInd" type="xs:string" minOccurs="0"/>
+			<xs:element name="stateWithholdPct" type="xs:decimal" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="addressType">
+		<xs:sequence>
+			<xs:element name="address1" type="xs:string" minOccurs="0"/>
+			<xs:element name="address2" type="xs:string" minOccurs="0"/>
+			<xs:element name="city" type="xs:string" minOccurs="0"/>
+			<xs:element name="country" type="xs:string" minOccurs="0"/>
+			<xs:element name="state" type="xs:string" minOccurs="0"/>
+			<xs:element name="zipcode" type="xs:string" minOccurs="0"/>
+			<xs:element name="zipFour" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="accountBalancesType">
+		<xs:all>
+			<xs:element name="accruedDividend" type="xs:double" minOccurs="0"/>
+			<xs:element name="accruedInterest" type="xs:double" minOccurs="0"/>
+			<xs:element name="accumulatedValue" type="xs:double" minOccurs="0"/>
+			<xs:element name="alternativeInvestments" type="xs:double" minOccurs="0"/>
+			<xs:element name="bankDeposit" type="xs:double" minOccurs="0"/>
+			<xs:element name="buyingPower" type="xs:double" minOccurs="0"/>
+			<xs:element name="cashAndEquivalentsPercent" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="cashAvailableType2" type="xs:double" minOccurs="0"/>
+			<xs:element name="cashBalance" type="xs:double" minOccurs="0"/>
+			<xs:element name="cashNEquivalents" type="xs:double" minOccurs="0"/>
+			<xs:element name="cashSurrenderValue" type="xs:double" minOccurs="0"/>
+			<xs:element name="equity" type="xs:double" minOccurs="0"/>
+			<xs:element name="equityPercentage" type="xs:double" minOccurs="0"/>
+			<xs:element name="fedCall" type="xs:double" minOccurs="0"/>
+			<xs:element name="fixedAnnuities" type="xs:double" minOccurs="0"/>
+			<xs:element name="fundsAvailable" type="xs:double" minOccurs="0"/>
+			<xs:element name="isDCASweep" type="xs:int" minOccurs="0"/>
+			<xs:element name="isMarginAccount" type="xs:int" minOccurs="0"/>
+			<xs:element name="longValueType1" type="xs:double" minOccurs="0"/>
+			<xs:element name="longValueType2" type="xs:double" minOccurs="0"/>
+			<xs:element name="lplAcctVal" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="LPLSecuritiesValue" type="xs:double" minOccurs="0"/>
+			<xs:element name="LPLSecuritiesValueRT" type="xs:double" minOccurs="0"/>
+			<xs:element name="maintCall" type="xs:double" minOccurs="0"/>
+			<xs:element name="margin" type="xs:double" minOccurs="0"/>
+			<xs:element name="moneyMarket" type="xs:double" minOccurs="0"/>
+			<xs:element name="MTDDebitInterest" type="xs:double" minOccurs="0"/>
+			<xs:element name="mutualFunds" type="xs:double" minOccurs="0"/>
+			<xs:element name="networkedSecuritiesValue" type="xs:double" minOccurs="0"/>
+			<xs:element name="outsideAccountValue" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="securities" type="xs:double" minOccurs="0"/>
+			<xs:element name="shortValueType6" type="xs:double" minOccurs="0"/>
+			<xs:element name="skandiaASAValue" type="xs:double" minOccurs="0"/>
+			<xs:element name="totalAcctVal" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="totalGainLossRT" type="xs:double" minOccurs="0"/>
+			<xs:element name="totalPurchanseCostRT" type="xs:double" minOccurs="0"/>
+			<xs:element name="totalSegmentTypeHoldingAccount" type="xs:double" minOccurs="0"/>
+			<xs:element name="totalStructuredInvestmentOption" type="xs:double" minOccurs="0"/>
+			<xs:element name="totalVariableInvestmentOption" type="xs:double" minOccurs="0"/>
+			<xs:element name="variableAnnuities" type="xs:double" minOccurs="0"/>
+			<xs:element name="variableLife" type="xs:double" minOccurs="0"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="accountSuitabilityType">
+		<xs:sequence>
+			<xs:element name="accountID" type="xs:int" minOccurs="0"/>
+			<xs:element name="annualIncome" type="xs:string" minOccurs="0"/>
+			<xs:element name="annualIncomeCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="approxValue" type="xs:string" minOccurs="0"/>
+			<xs:element name="approxValueCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="brSuitability" type="xs:string" minOccurs="0"/>
+			<xs:element name="changeDate" type="xs:string" minOccurs="0"/>
+			<xs:element name="closedDate" type="xs:string" minOccurs="0"/>
+			<xs:element name="countryOfResidence" type="xs:string" minOccurs="0"/>
+			<xs:element name="employeeAcct" type="xs:string" minOccurs="0"/>
+			<xs:element name="FIEField" type="xs:string" minOccurs="0"/>
+			<xs:element name="govtEntityAccount" type="xs:string" minOccurs="0"/>
+			<xs:element name="investTimeHorizon1" type="xs:string" minOccurs="0"/>
+			<xs:element name="investTimeHorizon2" type="xs:string" minOccurs="0"/>
+			<xs:element name="isErisa" type="xs:string" minOccurs="0"/>
+			<xs:element name="isSuitable" type="xs:int" minOccurs="0"/>
+			<xs:element name="ITSField" type="xs:string" minOccurs="0"/>
+			<xs:element name="liquidityNeedsIndicator" type="xs:string" minOccurs="0"/>
+			<xs:element name="liquidityNeedsPercentage" type="xs:string" minOccurs="0"/>
+			<xs:element name="liquidityNeedsTimeFrom" type="xs:string" minOccurs="0"/>
+			<xs:element name="liquidNetWorth" type="xs:string" minOccurs="0"/>
+			<xs:element name="liquidNetWorthCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="lplAccountNo" type="xs:string" minOccurs="0"/>
+			<xs:element name="netWorth" type="xs:string" minOccurs="0"/>
+			<xs:element name="netWorthCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="openDate" type="xs:string" minOccurs="0"/>
+			<xs:element name="registrationDescription" type="xs:string" minOccurs="0"/>
+			<xs:element name="registrationType" type="xs:string" minOccurs="0"/>
+			<xs:element name="retirementAccount" type="xs:string" minOccurs="0"/>
+			<xs:element name="sourceOfWealth" type="xs:string" minOccurs="0"/>
+			<xs:element name="sourceOfWealthCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="sourceOfWealthDetail" type="xs:string" minOccurs="0"/>
+			<xs:element name="financialInvestments" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="fieField" type="xs:string" minOccurs="0"/>
+						<xs:element name="fieFieldValue" type="xs:string" minOccurs="0"/>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="techniquesNStrategies" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="itsField" type="xs:string" minOccurs="0"/>
+						<xs:element name="itsFieldValue" type="xs:string" minOccurs="0"/>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cashAccountsType">
+		<xs:sequence>
+			<xs:element name="accountNo" type="xs:string" minOccurs="0"/>
+			<xs:element name="ACHAccountBalance" type="xs:string" minOccurs="0"/>
+			<xs:element name="ACHCreditAccountBalance" type="xs:int" minOccurs="0"/>
+			<xs:element name="ACHDebitAccountBalance" type="xs:int" minOccurs="0"/>
+			<xs:element name="ACHIncome" type="xs:int" minOccurs="0"/>
+			<xs:element name="checkingStartDate" type="xs:string" minOccurs="0"/>
+			<xs:element name="checkingType" type="xs:string" minOccurs="0"/>
+			<xs:element name="securityNo" type="xs:int" minOccurs="0"/>
+			<xs:element name="sweepDividendsNInterest" type="xs:string" minOccurs="0"/>
+			<xs:element name="sweepLocation" type="xs:string" minOccurs="0"/>
+			<xs:element name="sweepStatus" type="xs:int" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="accountInstructionType">
+		<xs:all>
+			<xs:element name="dividend" type="xs:string" minOccurs="0"/>
+			<xs:element name="dividendReinvest" type="xs:string" minOccurs="0"/>
+			<xs:element name="DRPAverageCostMethod" type="xs:string" minOccurs="0"/>
+			<xs:element name="DRPElectionDate" type="xs:string" minOccurs="0"/>
+			<xs:element name="isACHSetup" type="xs:int" minOccurs="0"/>
+			<xs:element name="isCheckWriting" type="xs:int" minOccurs="0"/>
+			<xs:element name="isMarginAccount" type="xs:int" minOccurs="0"/>
+			<xs:element name="isPerformanceVA" type="xs:string" minOccurs="0"/>
+			<xs:element name="isPreAuthorized" type="xs:int" minOccurs="0"/>
+			<xs:element name="isSystematicWithdrawal" type="xs:int" minOccurs="0"/>
+			<xs:element name="longTermCapGains" type="xs:string" minOccurs="0"/>
+			<xs:element name="lotReliefMethod" type="xs:string" minOccurs="0"/>
+			<xs:element name="marginPapers" type="xs:string" minOccurs="0"/>
+			<xs:element name="MFAverageCostMethod" type="xs:string" minOccurs="0"/>
+			<xs:element name="MFElectionDate" type="xs:string" minOccurs="0"/>
+			<xs:element name="nav" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="oldAccountNo" type="xs:string" minOccurs="0"/>
+			<xs:element name="optionLevel" type="xs:string" minOccurs="0"/>
+			<xs:element name="partyIDQualifier" type="xs:string" minOccurs="0"/>
+			<xs:element name="proceeds" type="xs:string" minOccurs="0"/>
+			<xs:element name="securities" type="xs:string" minOccurs="0"/>
+			<xs:element name="shortTermCapGains" type="xs:string" minOccurs="0"/>
+			<xs:element name="statementCostBasis" type="xs:string" minOccurs="0"/>
+			<xs:element name="w9Status" type="xs:string" minOccurs="0"/>
+			<xs:element name="w9StatusCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="withHoldingInstruction" type="xs:string" minOccurs="0"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="tradingAuthoritiesType">
+		<xs:sequence>
+			<xs:element name="accountNo" type="xs:string" minOccurs="0"/>
+			<xs:element name="addressLine1" type="xs:string" minOccurs="0"/>
+			<xs:element name="addressLine2" type="xs:string" minOccurs="0"/>
+			<xs:element name="addressLine3" type="xs:string" minOccurs="0"/>
+			<xs:element name="birthDate" type="xs:string" minOccurs="0"/>
+			<xs:element name="city" type="xs:string" minOccurs="0"/>
+			<xs:element name="countryCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="customerID" type="xs:string" minOccurs="0"/>
+			<xs:element name="firstName" type="xs:string" minOccurs="0"/>
+			<xs:element name="foreignZip" type="xs:string" minOccurs="0"/>
+			<xs:element name="govtID" type="xs:string" minOccurs="0"/>
+			<xs:element name="homePhone" type="xs:string" minOccurs="0"/>
+			<xs:element name="isSSN" type="xs:string" minOccurs="0"/>
+			<xs:element name="lastOrCompanyName" type="xs:string" minOccurs="0"/>
+			<xs:element name="middleName" type="xs:string" minOccurs="0"/>
+			<xs:element name="nameType" type="xs:string" minOccurs="0"/>
+			<xs:element name="province" type="xs:string" minOccurs="0"/>
+			<xs:element name="ssnOrTaxID" type="xs:string" minOccurs="0"/>
+			<xs:element name="stateCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="zipCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="zipPlusFour" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="interestedPartiesType">
+		<xs:sequence>
+			<xs:element name="accountNo" type="xs:string" minOccurs="0"/>
+			<xs:element name="addressLine1" type="xs:string" minOccurs="0"/>
+			<xs:element name="addressLine2" type="xs:string" minOccurs="0"/>
+			<xs:element name="addressLine3" type="xs:string" minOccurs="0"/>
+			<xs:element name="addressLine4" type="xs:string" minOccurs="0"/>
+			<xs:element name="city" type="xs:string" minOccurs="0"/>
+			<xs:element name="countryCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="foreignZip" type="xs:string" minOccurs="0"/>
+			<xs:element name="hasDuplicateConfirms" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="hasDuplicateStatements" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="interestedPartyType" type="xs:int" minOccurs="0"/>
+			<xs:element name="name1" type="xs:string" minOccurs="0"/>
+			<xs:element name="name2" type="xs:string" minOccurs="0"/>
+			<xs:element name="name3" type="xs:string" minOccurs="0"/>
+			<xs:element name="name4" type="xs:string" minOccurs="0"/>
+			<xs:element name="numberConfirmCopies" type="xs:int" minOccurs="0"/>
+			<xs:element name="numberStatementCopies" type="xs:int" minOccurs="0"/>
+			<xs:element name="sequenceNumber" type="xs:int" minOccurs="0"/>
+			<xs:element name="stateCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="zipCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="zipPlusFour" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="directBusinessAccountsType">
+		<xs:sequence>
+			<xs:element name="accountID" type="xs:int" minOccurs="0"/>
+			<xs:element name="accountLocationShortName" type="xs:string" minOccurs="0"/>
+			<xs:element name="cashBal" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="cashPercentage" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="comissionYtd" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="cusip" type="xs:string" minOccurs="0"/>
+			<xs:element name="LPLAccountNo" type="xs:string" minOccurs="0"/>
+			<xs:element name="LPLAccountValue" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="NetworkedLPLAccountID" type="xs:int" minOccurs="0"/>
+			<xs:element name="outsideAccountValue" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="repId" type="xs:string" minOccurs="0"/>
+			<xs:element name="sponsorAccountNo" type="xs:string" minOccurs="0"/>
+			<xs:element name="totalAccountValue" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="ytdgl" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="ytdglPercentage" type="xs:decimal" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="advisoryDetailsType">
+		<xs:sequence>
+			<xs:element name="advisoryYTD" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="allocationPercentage" type="xs:int" minOccurs="0"/>
+			<xs:element name="anniversaryDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="clientFeePct" type="xs:string" minOccurs="0"/>
+			<xs:element name="dataFeeChanged" type="xs:string" minOccurs="0"/>
+			<xs:element name="directBilling" type="xs:string" minOccurs="0"/>
+			<xs:element name="discretion" type="xs:string" minOccurs="0"/>
+			<xs:element name="displayApprox" type="xs:int" minOccurs="0"/>
+			<xs:element name="feeCredit" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="feeCycle" type="xs:string" minOccurs="0"/>
+			<xs:element name="feePct" type="xs:string" minOccurs="0"/>
+			<xs:element name="feeScheduleId" type="xs:int" minOccurs="0"/>
+			<xs:element name="feeScheduleName" type="xs:string" minOccurs="0"/>
+			<xs:element name="feeType" type="xs:string" minOccurs="0"/>
+			<xs:element name="fundName" type="xs:string" minOccurs="0"/>
+			<xs:element name="inceptionDate" type="xs:string" minOccurs="0"/>
+			<xs:element name="lastRebalanceDate" type="xs:string" minOccurs="0"/>
+			<xs:element name="loiDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="loiROAAmount" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="loiROAIndicator" type="xs:string" minOccurs="0"/>
+			<xs:element name="minCharge" type="xs:string" minOccurs="0"/>
+			<xs:element name="newFeeProcess" type="xs:string" minOccurs="0"/>
+			<xs:element name="nextRebalanceDate" type="xs:string" minOccurs="0"/>
+			<xs:element name="payingAccountNo" type="xs:string" minOccurs="0"/>
+			<xs:element name="portfolioType" type="xs:string" minOccurs="0"/>
+			<xs:element name="rebalanceFrequency" type="xs:string" minOccurs="0"/>
+			<xs:element name="rebalanceStatus" type="xs:string" minOccurs="0"/>
+			<xs:element name="rebalanceStatusDescription" type="xs:string" minOccurs="0"/>
+			<xs:element name="roaAccount" type="xs:string" minOccurs="0"/>
+			<xs:element name="shareClass" type="xs:string" minOccurs="0"/>
+			<xs:element name="terminationDate" type="xs:string" minOccurs="0"/>
+			<xs:element name="terminationReason" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="strategistDetailsType">
+		<xs:sequence>
+			<xs:element name="allocation" type="xs:int" minOccurs="0"/>
+			<xs:element name="model" type="xs:string" minOccurs="0"/>
+			<xs:element name="ModelScore" type="xs:int" minOccurs="0"/>
+			<xs:element name="strategist" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="restrictionDetailsType">
+		<xs:sequence>
+			<xs:element name="restrictionType" type="xs:string" minOccurs="0"/>
+			<xs:element name="restrictionName" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="allocationDetailsType">
+		<xs:sequence>
+			<xs:element name="assetClassName" type="xs:string" minOccurs="0"/>
+			<xs:element name="allocationPercent" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="managerDetailsType">
+		<xs:sequence>
+			<xs:element name="feeRate" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="managerId" type="xs:string" minOccurs="0"/>
+			<xs:element name="managerName" type="xs:string" minOccurs="0"/>
+			<xs:element name="managerStyleCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="styleName" type="xs:string" minOccurs="0"/>
+			<xs:element name="transactionCreatedDate" type="xs:dateTime" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="beneficiariesType">
+		<xs:sequence>
+			<xs:element name="birthDate" type="xs:string" minOccurs="0"/>
+			<xs:element name="designation" type="xs:string" minOccurs="0"/>
+			<xs:element name="designationName" type="xs:string" minOccurs="0"/>
+			<xs:element name="lifeExcepctancy" type="xs:string" minOccurs="0"/>
+			<xs:element name="name1" type="xs:string" minOccurs="0"/>
+			<xs:element name="name2" type="xs:string" minOccurs="0"/>
+			<xs:element name="name3" type="xs:string" minOccurs="0"/>
+			<xs:element name="name4" type="xs:string" minOccurs="0"/>
+			<xs:element name="name5" type="xs:string" minOccurs="0"/>
+			<xs:element name="name6" type="xs:string" minOccurs="0"/>
+			<xs:element name="percentage" type="xs:string" minOccurs="0"/>
+			<xs:element name="relationship" type="xs:string" minOccurs="0"/>
+			<xs:element name="relationshipIndicator" type="xs:string" minOccurs="0"/>
+			<xs:element name="rmdMethod" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="portfolioManagerDetailsType">
+		<xs:sequence>
+			<xs:element name="accountID" type="xs:string" minOccurs="0"/>
+			<xs:element name="benchmarks" type="res:benchmarksType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="defaultDescription" type="xs:string" minOccurs="0"/>
+			<xs:element name="description" type="xs:string" minOccurs="0"/>
+			<xs:element name="firstTransactionDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="inceptionDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="inceptionEditEndDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="inceptionEditStartDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="lastTransactionDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="notes" type="xs:string" minOccurs="0"/>
+			<xs:element name="performanceEnabled" type="xs:string" minOccurs="0"/>
+			<xs:element name="performanceEndDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="performanceStartDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="performanceVA" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="sponsorName" type="xs:string" minOccurs="0"/>
+			<xs:element name="terminationDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="terminationEditEndDate" type="xs:dateTime" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="systematicsType">
+		<xs:sequence>
+			<xs:element name="amount" type="xs:string" minOccurs="0"/>
+			<xs:element name="endDate" type="xs:string" minOccurs="0"/>
+			<xs:element name="exchangeToSecurityDesc" type="xs:string" minOccurs="0"/>
+			<xs:element name="exchangeToSecurityID" type="xs:string" minOccurs="0"/>
+			<xs:element name="frequency" type="xs:string" minOccurs="0"/>
+			<xs:element name="loiAmount" type="xs:string" minOccurs="0"/>
+			<xs:element name="loiCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="loiNo" type="xs:string" minOccurs="0"/>
+			<xs:element name="nextTradeDate" type="xs:string" minOccurs="0"/>
+			<xs:element name="securityDesc" type="xs:string" minOccurs="0"/>
+			<xs:element name="securityID" type="xs:string" minOccurs="0"/>
+			<xs:element name="startDate" type="xs:string" minOccurs="0"/>
+			<xs:element name="tradeType" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="benchmarksType">
+		<xs:sequence>
+			<xs:element name="accountID" type="xs:string" minOccurs="0"/>
+			<xs:element name="benchmarkId" type="xs:string" minOccurs="0"/>
+			<xs:element name="benchmarkName" type="xs:string" minOccurs="0"/>
+			<xs:element name="cusip" type="xs:string" minOccurs="0"/>
+			<xs:element name="disclaimer" type="xs:string" minOccurs="0"/>
+			<xs:element name="displayOrder" type="xs:string" minOccurs="0"/>
+			<xs:element name="frequencyId" type="xs:string" minOccurs="0"/>
+			<xs:element name="investmentObjective" type="xs:string" minOccurs="0"/>
+			<xs:element name="mnemonic" type="xs:string" minOccurs="0"/>
+			<xs:element name="pmDisplay" type="xs:string" minOccurs="0"/>
+			<xs:element name="shortName" type="xs:string" minOccurs="0"/>
+			<xs:element name="statementName" type="xs:string" minOccurs="0"/>
+			<xs:element name="statementType" type="xs:string" minOccurs="0"/>
+			<xs:element name="typeId" type="xs:string" minOccurs="0"/>
+			<xs:element name="vendorId" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="carrierMatrixType">
+		<xs:sequence>
+			<xs:element name="columnName" type="xs:string" minOccurs="0"/>
+			<xs:element name="companyCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="cusip" type="xs:string" minOccurs="0"/>
+			<xs:element name="description" type="xs:string" minOccurs="0"/>
+			<xs:element name="displayOrder" type="xs:string" minOccurs="0"/>
+			<xs:element name="label" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="caseHistoryType">
+		<xs:sequence>
+			<xs:element name="authorName" type="xs:string" minOccurs="0"/>
+			<xs:element name="caseHistoryId" type="xs:int" minOccurs="0"/>
+			<xs:element name="changeDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="description" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="requirementsType">
+		<xs:sequence>
+			<xs:element name="carrierOrderDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="carrierReceiveDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="caseManager" type="xs:string" minOccurs="0"/>
+			<xs:element name="description" type="xs:string" minOccurs="0"/>
+			<xs:element name="requiredOf" type="xs:string" minOccurs="0"/>
+			<xs:element name="requirementCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="requirementDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="requirementId" type="xs:int" minOccurs="0"/>
+			<xs:element name="requirementStatusText" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="InvestmentsType">
+		<xs:sequence>
+			<xs:element name="asOfDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="assetClass" type="xs:string" minOccurs="0"/>
+			<xs:element name="carrierSpecific1" type="xs:string" minOccurs="0"/>
+			<xs:element name="carrierSpecific2" type="xs:string" minOccurs="0"/>
+			<xs:element name="carrierSpecific3" type="xs:string" minOccurs="0"/>
+			<xs:element name="carrierSpecific4" type="xs:string" minOccurs="0"/>
+			<xs:element name="carrierSpecific5" type="xs:string" minOccurs="0"/>
+			<xs:element name="cusip" type="xs:string" minOccurs="0"/>
+			<xs:element name="family" type="xs:string" minOccurs="0"/>
+			<xs:element name="fundid" type="xs:string" minOccurs="0"/>
+			<xs:element name="fundname" type="xs:string" minOccurs="0"/>
+			<xs:element name="grouping" type="xs:string" minOccurs="0"/>
+			<xs:element name="insurerid" type="xs:string" minOccurs="0"/>
+			<xs:element name="insurerName" type="xs:string" minOccurs="0"/>
+			<xs:element name="maturityDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="price" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="productName" type="xs:string" minOccurs="0"/>
+			<xs:element name="quantity" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="securityID" type="xs:string" minOccurs="0"/>
+			<xs:element name="securityType" type="xs:string" minOccurs="0"/>
+			<xs:element name="subAccountId" type="xs:string" minOccurs="0"/>
+			<xs:element name="subAccountName" type="xs:string" minOccurs="0"/>
+			<xs:element name="subFundId" type="xs:string" minOccurs="0"/>
+			<xs:element name="symbol" type="xs:string" minOccurs="0"/>
+			<xs:element name="value" type="xs:decimal" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="documentsType">
+		<xs:all>
+			<xs:element name="codeShortName" type="xs:string" minOccurs="0"/>
+			<xs:element name="formCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="formName" type="xs:string" minOccurs="0"/>
+			<xs:element name="formRequestNo" type="xs:int" minOccurs="0"/>
+			<xs:element name="formStatus" type="xs:string" minOccurs="0"/>
+			<xs:element name="lastUpdate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="statusDesc" type="xs:string" minOccurs="0"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="PrudentProcessResponseType">
+		<xs:sequence>
+			<xs:element name="bicDisplayName" type="xs:string" minOccurs="0"/>
+			<xs:element name="bicName" type="xs:string" minOccurs="0"/>
+			<xs:element name="bicType" type="xs:string" minOccurs="0"/>
+			<xs:element name="consumerID" type="xs:string" minOccurs="0"/>
+			<xs:element name="createDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="firmID" type="xs:string" minOccurs="0"/>
+			<xs:element name="questions" type="res:QuestionsType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="repID" type="xs:string" minOccurs="0"/>
+			<xs:element name="status" type="xs:string" minOccurs="0"/>
+			<xs:element name="trackingID" type="xs:string" minOccurs="0"/>
+			<xs:element name="transactionNum" type="xs:string" minOccurs="0"/>
+			<xs:element name="transactionType" type="xs:string" minOccurs="0"/>
+			<xs:element name="updateDate" type="xs:dateTime" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QuestionsType">
+		<xs:sequence>
+			<xs:element name="options" type="res:OptionsType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="QID" type="xs:string" minOccurs="0"/>
+			<xs:element name="question" type="xs:string" minOccurs="0"/>
+			<xs:element name="questionareUpdateDate" type="xs:dateTime" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="OptionsType">
+		<xs:sequence>
+			<xs:element name="choices" type="res:ChoicesType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="OPID" type="xs:string" minOccurs="0"/>
+			<xs:element name="option" type="xs:string" minOccurs="0"/>
+			<xs:element name="optionUpdateDate" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ChoicesType">
+		<xs:sequence>
+			<xs:element name="choice" type="xs:string" minOccurs="0"/>
+			<xs:element name="choiceUpdateDate" type="xs:string" minOccurs="0"/>
+			<xs:element name="CHOID" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RiskDetailsType">
+		<xs:all>
+			<xs:element name="daysinOutOfRange" type="xs:int" minOccurs="0"/>
+			<xs:element name="extRiskScoreRange" type="xs:string" minOccurs="0"/>
+			<xs:element name="lastChangeDate" type="xs:date" minOccurs="0"/>
+			<xs:element name="outOfRange" type="xs:string" minOccurs="0"/>
+			<xs:element name="riskScore" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="riskScoreRange" type="xs:string" minOccurs="0"/>
+		</xs:all>
+	</xs:complexType>
+</xs:schema>
