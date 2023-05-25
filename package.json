@@ -1,0 +1,18 @@
+{
+  "name": "xsd-to-ts",
+  "version": "1.0.0",
+  "description": "Converts an xsd document to Typescript interfaces.",
+  "main": "xds-to-ts.js",
+  "scripts": {
+    "build": "cls && tsc",
+    "prestart": "npm run build",
+    "start": "node xds-to-ts.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sean Street",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^16.11.6",
+    "jsdom": "^18.0.1"
+  }
+}
